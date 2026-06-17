@@ -101,3 +101,14 @@ ui/*              Dracula dashboard + popup + theme
   entity escaping correct.
 - Live scraping/downloads run in your browser by design (only the real session
   passes Cloudflare).
+
+## Credits
+The generic parser owes a lot to **epublifier**. The whole "point it at a chapter list,
+or sit on one chapter and click Next" idea comes straight from there.
+
+The Anna's Archive download resolver, the few different ways it digs the real file link
+out of a slow-download page, is based on how **stacks** does it.
+
+Content extraction uses Mozilla's **Readability**.
+
+(Links to drop in here once you grab them: epublifier, stacks.)

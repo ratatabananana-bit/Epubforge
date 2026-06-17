@@ -5,30 +5,30 @@ site**, plus an **Anna's Archive** download manager. No server, no Docker — it
 in your real browser tab, so Cloudflare is never fought, and it **saves progress +
 resumes**.
 
-## ok, real talk about Cloudflare
+## Real talk about Cloudflare
 
-honestly half the reason this thing exists is Cloudflare. i just wanted to read some
-web novels offline. that's it. instead i spent way too many nights staring at
-"Checking your browser before you access..." spin forever, or getting the "Verify you
-are human" checkbox on the SAME site for the fifth time in ten minutes, right after
-i'd already clicked through it. like i get it, bots, whatever. but i'm a guy clicking
+Honestly, half the reason this thing exists is Cloudflare. I just wanted to read some
+web novels offline. That's it. Instead I spent way too many nights staring at
+"Checking your browser before you access..." spinning forever, or getting the "Verify
+you are human" checkbox on the SAME site for the fifth time in ten minutes, right
+after I'd already clicked through it. I get it, bots, whatever — but I'm a guy clicking
 a chapter link.
 
-and every "save to epub" tool i tried just fell over the second it touched a real
-site. they fire off some background fetch, cloudflare goes nope, and you either get a
-403 or — worse — a page full of challenge html that the tool cheerfully saves *as your
-chapter*. so now you've got a nice epub where chapter 12 is just the words "Just a
-moment..." cool. very useful. thanks.
+And every "save to EPUB" tool I tried just fell over the second it touched a real site.
+They fire off some background fetch, Cloudflare goes nope, and you either get a 403
+or — worse — a page full of challenge HTML that the tool cheerfully saves *as your
+chapter*. So now you've got a nice EPUB where chapter 12 is just the words "Just a
+moment..." Cool. Very useful. Thanks.
 
-the trick, which took me embarrassingly long to actually land on, is to stop fighting
-it. don't fetch from a server, don't spoof a user-agent, don't do anything clever. run
+The trick, which took me embarrassingly long to actually land on, is to stop fighting
+it. Don't fetch from a server, don't spoof a user-agent, don't do anything clever. Run
 inside the actual tab you already solved the check in, reuse the cookies that are
-already there, and pull chapters one at a time like a normal person reading. and when
-cloudflare DOES slam the door halfway through a run (it will, it always does), just
-save everything, let you go solve the check yourself, and pick back up where it
-stopped instead of starting the whole book over.
+already there, and pull chapters one at a time like a normal person reading. And when
+Cloudflare DOES slam the door halfway through a run (it will, it always does), just
+save everything, let you go solve the check yourself, and pick back up where it stopped
+instead of starting the whole book over.
 
-is it bulletproof? no. nothing is with these people. but at least now when it breaks it
+Is it bulletproof? No. Nothing is with these people. But at least now when it breaks it
 doesn't throw away your progress or quietly pretend a challenge page was chapter 12.
 
 ## Novels → EPUB (generic, adaptive)

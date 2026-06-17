@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>EpubForge</title>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>EpubForge <small>web novel → EPUB + archive downloads</small></h1>
+    <button class="ghost sm" id="refresh">Refresh</button>
+  </header>
+
+  <div class="card">
+    <h2>Novels → EPUB</h2>
+    <div class="meta">Open a supported book page, then click the EpubForge toolbar icon → <b>Start</b>, or use the panel on the page. Cloudflare-resilient: it saves progress and resumes.</div>
+    <div class="hint">Supported: novellive.app/book/… , royalroad.com/fiction/… (more parsers easy to add).</div>
+  </div>
+
+  <div class="card">
+    <h2>Active downloads <span id="acount" class="tag"></span></h2>
+    <ul class="list" id="jobs"></ul>
+  </div>
+
+  <div class="card">
+    <h2>Anna's Archive — Settings</h2>
+    <label for="aakey">Fast-download membership API key (optional — enables direct downloads)</label>
+    <div class="row">
+      <input type="password" id="aakey" placeholder="paste your Anna's Archive secret key"/>
+      <button id="savekey">Save</button>
+      <button class="ghost" id="togglekey">Show</button>
+    </div>
+    <div class="hint">Find it at Anna's Archive → Account → "Secret key" (members). Without a key, downloads use the page's slow-mirror links.</div>
+    <div id="setmsg" class="meta" style="margin-top:8px"></div>
+  </div>
+
+  <div class="card">
+    <h2>Queue <span id="qcount" class="tag"></span></h2>
+    <div class="row" style="margin-bottom:8px">
+      <button class="green sm" id="runqueue">Download all (fast)</button>
+      <button class="ghost sm" id="clearqueue">Clear</button>
+    </div>
+    <ul class="list" id="queue"></ul>
+  </div>
+
+  <div class="card">
+    <h2>History <span id="hcount" class="tag"></span></h2>
+    <div class="row" style="margin-bottom:8px"><button class="ghost sm" id="clearhist">Clear history</button></div>
+    <ul class="list" id="history"></ul>
+  </div>
+
+  <div class="card">
+    <h2>Logs <span id="lcount" class="tag"></span></h2>
+    <div class="row" style="margin-bottom:8px">
+      <button class="green sm" id="dllog">Download log file</button>
+      <button class="ghost sm" id="clearlog">Clear</button>
+      <label style="margin:0;color:var(--muted)"><input type="checkbox" id="autolog" checked/> auto-refresh</label>
+    </div>
+    <pre id="logs" style="margin:0;max-height:340px;overflow:auto;background:#1a1b23;border:1px solid var(--line);border-radius:6px;padding:10px;font:12px/1.45 monospace;white-space:pre-wrap;color:#bdc6e0"></pre>
+  </div>
+</div>
+<script src="../lib/common.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

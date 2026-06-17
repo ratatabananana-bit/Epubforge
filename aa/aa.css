@@ -1,0 +1,26 @@
+#bs-aa {
+  position: fixed; top: 96px; left: 16px; z-index: 2147483647; width: 230px;
+  background: #282a36; color: #f8f8f2; font: 13px/1.4 system-ui, sans-serif;
+  border: 1px solid #bd93f9; border-radius: 8px; padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.5);
+}
+#bs-aa .bs-h { font-weight: 600; color: #bd93f9; margin-bottom: 6px; }
+#bs-aa .bs-stat { color: #6272a4; font-size: 12px; margin-bottom: 8px; min-height: 16px; }
+#bs-aa .bs-row { display: flex; gap: 6px; }
+#bs-aa button {
+  flex: 1; padding: 7px 8px; border: 0; border-radius: 6px; cursor: pointer;
+  font-weight: 600; font-size: 12px; background: #bd93f9; color: #282a36;
+}
+#bs-aa #bs-q { background: #44475a; color: #f8f8f2; }
+#bs-aa .bs-link {
+  width: 100%; margin-top: 8px; background: transparent; color: #8be9fd;
+  text-decoration: underline; font-weight: 400;
+}
+.bs-inline {
+  display: inline-flex; gap: 6px; margin-left: 10px; vertical-align: middle;
+}
+.bs-inline .bs-mini {
+  font: 600 11px/1 system-ui, sans-serif; padding: 4px 8px; border: 0;
+  border-radius: 5px; cursor: pointer; background: #bd93f9; color: #282a36;
+}
+.bs-inline .bs-mini.ghost { background: #44475a; color: #f8f8f2; }

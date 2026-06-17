@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+.vscode/
+.idea/
+
+# scratch / build artifacts
+_zip*
+*.zip
+*.epub
+*.log

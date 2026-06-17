@@ -7,29 +7,26 @@ resumes**.
 
 ## Real talk about Cloudflare
 
-Honestly, half the reason this thing exists is Cloudflare. I just wanted to read some
-web novels offline. That's it. Instead I spent way too many nights staring at
-"Checking your browser before you access..." spinning forever, or getting the "Verify
-you are human" checkbox on the SAME site for the fifth time in ten minutes, right
-after I'd already clicked through it. I get it, bots, whatever — but I'm a guy clicking
-a chapter link.
+A big chunk of why this exists is just Cloudflare. I wanted to read web novels offline
+and that turned into way too many nights watching "Checking your browser before you
+access..." spin, or clicking the "Verify you are human" box on the same site for the
+fifth time in ten minutes after I'd already passed it. The bots are real, sure. I'm
+still some guy clicking a chapter link.
 
-And every "save to EPUB" tool I tried just fell over the second it touched a real site.
-They fire off some background fetch, Cloudflare goes nope, and you either get a 403
-or — worse — a page full of challenge HTML that the tool cheerfully saves *as your
-chapter*. So now you've got a nice EPUB where chapter 12 is just the words "Just a
-moment..." Cool. Very useful. Thanks.
+Every "save to EPUB" tool I tried broke the moment it hit an actual site. They send a
+background fetch, Cloudflare blocks it, and you get back a 403 or a page full of
+challenge HTML. Then the tool saves that challenge page as your chapter, so you open
+the book later and chapter 12 is the text "Just a moment...". Great.
 
-The trick, which took me embarrassingly long to actually land on, is to stop fighting
-it. Don't fetch from a server, don't spoof a user-agent, don't do anything clever. Run
-inside the actual tab you already solved the check in, reuse the cookies that are
-already there, and pull chapters one at a time like a normal person reading. And when
-Cloudflare DOES slam the door halfway through a run (it will, it always does), just
-save everything, let you go solve the check yourself, and pick back up where it stopped
-instead of starting the whole book over.
+What finally worked was giving up on being clever. No server fetches, no spoofed
+user-agent. It runs inside the tab you already cleared the check in. It reuses the
+cookies sitting right there and grabs chapters one at a time, the way you'd read them.
+If Cloudflare cuts you off partway through, and it usually does, the job is saved. You
+go solve the check, hit resume, and it keeps going from where it stopped instead of
+making you redo the whole book.
 
-Is it bulletproof? No. Nothing is with these people. But at least now when it breaks it
-doesn't throw away your progress or quietly pretend a challenge page was chapter 12.
+It still isn't perfect. Cloudflare always finds a way. But a broken run won't lose your
+progress anymore, and it won't pass off a challenge screen as chapter 12.
 
 ## Novels → EPUB (generic, adaptive)
 

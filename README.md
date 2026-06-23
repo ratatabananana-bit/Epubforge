@@ -111,4 +111,4 @@ out of a slow-download page, is based on how **stacks** does it.
 
 Content extraction uses Mozilla's **Readability**.
 
-(Links to drop in here once you grab them: epublifier, stacks.)
+
